@@ -1,8 +1,4 @@
-#Python program to illustrate Missionaries & cannibals Problem 
-#This code is contributed by Sunit Mal 
 print("\n") 
-print("\tGame Start\nNow the task is to move all of them to right side of the river") 
-print("rules:\n1. The boat can carry at most two people\n2. If cannibals num greater than missionaries then the cannibals would eat the missionaries\n3. The boat cannot cross the river by itself with no people on board") 
 lM = 3		 #lM = Left side Missionaries number 
 lC = 3		 #lC = Laft side Cannibals number 
 rM=0		 #rM = Right side Missionaries number 
@@ -14,11 +10,11 @@ print("\nM M M C C C |	 --- | \n")
 try: 
 	while(True): 
 		while(True): 
-			print("Left side -> right side river travel") 
+			print("L->R") 
 			#uM = user input for number of missionaries for left to right travel 
 			#uC = user input for number of cannibals for left to right travel 
-			uM = int(input("Enter number of Missionaries travel => "))	 
-			uC = int(input("Enter number of Cannibals travel => ")) 
+			uM = int(input("M => "))	 
+			uC = int(input("C => ")) 
 
 			if((uM==0)and(uC==0)): 
 				print("Empty travel not possible") 
@@ -57,9 +53,9 @@ try:
 			print(k) 
 			break
 		while(True): 
-			print("Right side -> Left side river travel") 
-			userM = int(input("Enter number of Missionaries travel => ")) 
-			userC = int(input("Enter number of Cannibals travel => ")) 
+			print("R-> L") 
+			userM = int(input("M => ")) 
+			userC = int(input("C => ")) 
 			
 			if((userM==0)and(userC==0)): 
 					print("Empty travel not possible") 
