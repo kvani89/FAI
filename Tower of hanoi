@@ -1,0 +1,16 @@
+def hanoi(s,d,t,n):
+    global count
+    if(n==1):
+        count+=1
+        print("Move from tower",s,"to",d)
+        return 1
+    hanoi(s,t,d,n-1)
+    print("Move from tower",s,"to",d)
+    hanoi(t,d,s,n-1)
+    count+=1    
+    return count
+N=int(input("no.of disks:"))
+global count
+count=0
+i=hanoi(1,2,3,N)
+print("Total no.of moves:",i)
