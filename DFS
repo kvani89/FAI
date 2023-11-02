@@ -1,0 +1,11 @@
+import collections
+visited=set()
+def dfs(visited,graph,root):
+    if root not in visited:
+        print(root)
+        visited.add(root)
+        for neighbour in graph[root]:
+            dfs(visited,graph,neighbour)
+graph={'A':['B','C','D'],'B':['E'],'C':['D','E'],'D':[],'E':[]}
+print(graph)
+dfs(visited,graph,'A')
